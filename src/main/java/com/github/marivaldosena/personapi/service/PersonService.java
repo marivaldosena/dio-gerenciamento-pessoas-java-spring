@@ -8,6 +8,8 @@ import com.github.marivaldosena.personapi.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PersonService {
     private PersonRepository personRepository;
@@ -26,5 +28,9 @@ public class PersonService {
                 .builder()
                 .message("Person " + savedPerson.getFirstName() + " was created successfully")
                 .build();
+    }
+
+    public List<PersonDto> listAll() {
+        return null;
     }
 }
